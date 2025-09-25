@@ -26,9 +26,11 @@ pub struct GeneratedFiles {
 pub fn build_prompt(oam_yaml: &str, provider: &str, tool: &str) -> String {
     let requirements = if tool == "gcloud" {
         vec![
-            "Generate a shell script named 'deploy.sh' that uses gcloud commands to deploy the application.",
-            "The script should be executable and contain all necessary gcloud commands.",
-            "Expose environment variables for key parameters (region, project, name, image, scaling, env).",
+            "Generate a complete and runnable shell script named 'deploy.sh' that uses gcloud commands to deploy the application described in the OAM specification.",
+            "The script must not be a template. It should be a fully functional script that can be executed directly.",
+            "Use the component name from the OAM spec as the service name.",
+            "Use the image from the OAM spec as the container image.",
+            "Expose environment variables for key parameters like region and project.",
         ]
     } else {
         vec![
