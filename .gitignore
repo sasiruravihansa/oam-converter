@@ -1,1 +1,7 @@
-/target
+# Ignore the oam directory
+oam/
+target/
+.env
+
+# Ignore the gcp service account file
+gcp.json

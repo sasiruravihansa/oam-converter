@@ -10,3 +10,24 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 serde_yaml = "0.8"
 tokio = { version = "1", features = ["full"] }
+dotenvy = "0.15"
+log = "0.4"
+env_logger = "0.9"
+async-trait = "0.1"
+chrono = { version = "0.4", features = ["serde"] }
+
+# Database
+deadpool-postgres = "0.10"
+tokio-postgres = { version = "0.7", features = ["with-serde_json-1"] }
+openssl = { version = "0.10", features = ["vendored"] }
+
+# Cloud Storage (GCS)
+google-cloud-storage = "0.12"
+
+# Cloud Storage (AWS) - for future use
+aws-config = "0.55"
+aws-sdk-s3 = "0.28"
+
+# ZIP archive creation
+zip = "0.6"
+walkdir = "2"
